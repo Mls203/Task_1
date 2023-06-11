@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>SHOPE_NAME</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <style>
+
+        .navbar-brand, nav li, a {
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        @@media(max-width:768px) {
+            form {
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menulist" aria-expanded="false">
+                    <span class="sr-only">Menü</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="@Url.Action("Index2","Home")">Home</a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="menulist">
+
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("About","Home")" class="">About</a></li>
+                    <li><a href="@Url.Action("Contact","Home")" class="">Contact</a></li>
+
+                    <li class="dropdown ">
+                        <a id="dropdownCategoryButton"
+                           class="dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+
+                        </a>
+
+                        <ul class="dropdown-menu category" aria-labelledby="dropdownCategoryButton">
+                            <li><a href="@Url.Action("Category", "Home", new {datatag=1})" id="brand">Category 1</a></li>
+                            <li><a href="@Url.Action("Category","Home",new {datatag=2})" id="media">Category 2</a></li>
+                            <li><a href="@Url.Action("Category","Home",new {datatag=3})" id="art">Category 3</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a href="@Url.Action("Category","Home",new {datatag=4})" id="other">Category Other</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="dropdown">
+                        <a id="dropdownFilterButton"
+                           class="dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Filter
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownCategoryButton">
+                            <li><a href="">Max price</a></li>
+                            <li><a href="">Min price</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+
+                        </ul>
+
+                    </li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div style="margin-top:8px">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Ara">
+                                <button class="btn btn-outline-success mt-2 my-2 my-sm-0" style="margin-right:3px" type="submit">Ara</button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;Sign In
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;User Name
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+   <div class="well mt-5 " style="margin-bottom:0px;">
+
+      
+            <div class="row" style="margin-bottom:0px;">
+
+                <div class="col-md-4 col-md-offset-4 text-center">
+
+                    <a href="http://www.facebook.com" target="_blank">
+                        <span class="fa fa-facebook-square fa-2x"></span>
+                    </a>
+
+                    <a href="http://www.twitter.com" target="_blank">
+                        <span class="fa fa-twitter-square fa-2x"></span>
+                    </a>
+
+                    <a href="http://www.youtube.com" target="_blank">
+                        <span class="fa fa-youtube-square fa-2x text-danger"></span>
+                    </a>
+
+                </div>
+
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <p>
+                        Tüm Hakları Saklıdır.&copy; 2023
+                    </p>
+                    <p>
+                        <a href="mailto:mail@mailcom" class="btn btn-info btn-sm">E-Posta Gönder</a>
+                    </p>
+                </div>
+
+            </div>
+      
+
+    </div>
+
+
+</body>
+</html>

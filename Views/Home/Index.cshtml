@@ -1,0 +1,507 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ana Sayfa</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link href="/Content/Site.css" rel="stylesheet" />
+
+    <style>
+        body {
+            /*padding-top: 50px;
+            padding-bottom: 20px;*/
+            font - family: 'Bree Serif', serif;
+        }
+
+        /* Set padding to keep content from hitting the edges */
+        .body - content {
+            /*padding-left: 15px;
+            padding-right: 15px;*/
+        }
+
+        /* Set width on the form input elements since they're 100% wide by default */
+        input,
+        select,
+        textarea {
+            /*max-width: 280px;*/
+        }
+
+        .well - empty {
+            background - color: #ffffff;
+        }
+
+        .well - info {
+            background - color: #5bc0de;
+        }
+
+        .well - success {
+            background - color: #4cae4c;
+        }
+
+        .well - danger {
+            background - color: #d9534f;
+        }
+
+        .well - primary {
+            background - color: #337ab7;
+        }
+
+        .well - warning {
+            background - color: #f0ad4e;
+        }
+
+        /*Menü CSS*/
+
+
+        .dropdown: hover > .dropdown - menu {
+            display: block;
+        }
+
+        .dropdown - submenu {
+            position: relative;
+        }
+
+            .dropdown - submenu > .dropdown - menu {
+                top: 0;
+                left: 100 %;
+                margin - top: -6px;
+                margin - left: -1px;
+                -webkit - border - radius: 0 6px 6px 6px;
+                -moz - border - radius: 0 6px 6px;
+                border - radius: 0 6px 6px 6px;
+            }
+
+            .dropdown - submenu: hover > .dropdown - menu {
+                display: block;
+            }
+
+            .dropdown - submenu > a:after {
+                display: block;
+                content: " ";
+                float: right;
+                width: 0;
+                height: 0;
+                border - color: transparent;
+                border - style: solid;
+                border - width: 5px 0 5px 5px;
+                border - left - color: #ccc;
+                margin - top: 5px;
+                margin - right: -10px;
+            }
+
+            .dropdown - submenu: hover > a:after {
+                border - left - color: #fff;
+            }
+
+            .dropdown - submenu.pull - left {
+                float: none;
+            }
+
+                .dropdown - submenu.pull - left > .dropdown - menu {
+                    left: -100 %;
+                    margin - left: 10px;
+                    -webkit - border - radius: 6px 0 6px 6px;
+                    -moz - border - radius: 6px 0 6px 6px;
+                    border - radius: 6px 0 6px 6px;
+                }
+
+        .productNameStyle {
+            white - space: nowrap;
+            overflow: hidden;
+            text - overflow: ellipsis;
+        }
+    </style>
+    <script src="/Scripts/jquery-3.6.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menulist" aria-expanded="false">
+                    <span class="sr-only">Menü</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menulist">
+
+
+                <ul class="nav navbar-nav">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+
+
+                    <li class="dropdown">
+
+                        <a href="">
+                            Category <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li> <a href="">Category 1</a></li>
+                            <li> <a href="">Category 2</a></li>
+                            <li> <a href="">Category 3</a></li>
+
+                        </ul>
+
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="">
+                            Filter <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="">Max price</a></li>
+                            <li><a href="">Min price</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+                            <li><a href="">Stock</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div style="margin-top:8px">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Ara">
+                                <button class="btn btn-outline-success mt-2 my-2 my-sm-0" style="margin-right:3px" type="submit">Ara</button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;Sign In
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;User Name
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- CTRL + SHIFT + W : Browser da sayfayı açar.. -->
+    <!-- ALT + SHIFT + W : Seçileni element içine alır.. -->
+
+        <div class="row">
+
+            <div class="col-md-10 col-lg-10 col-sm-10">
+
+                <div class="row container">
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <div>
+
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/300x150">
+                            <div class="caption">
+                                <h3>Thumbnail caption heading</h3>
+
+                                <p>
+                                    <span style="text-decoration:line-through">300.00$</span>&nbsp;
+                                    <span>%20</span>&nbsp;
+                                    <b>240.00$</b>&nbsp;&nbsp;
+                                    <a href="" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#productinfo" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="productinfo" tabindex="-1" role="dialog" aria-labelledby="productinfo-label">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="productinfo-label">Ürün Bilgisi</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+                                    <p>Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.</p>
+                                    <p>Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Exit</button>
+                                    <a href="cart.html" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Add to Basket
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-sm-2 " style="height: 673px; background-color:#ccc">
+
+
+                <div style="text-align: center; margin-top: 50%;">
+                    <p>Banner</p>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <script>
+
+            function GetProductInfo(Id) {
+                $.ajax({
+                    url: "/i/GetProductDescription/" + Id,
+                    method: "get",
+                    async: true,
+                    success: function (data) {
+                        $("#ModalBodyP").text(data);
+                        //alert($("#modelBasketHref").attr("href"));
+                        var newHref = $("#modelBasketHref").attr("href");
+                        newHref = newHref.replace("/Id", "/" + Id);
+                        $("#modelBasketHref").attr("href", newHref);
+                    },
+                    error: function (err) {
+                        console.log("GetProductInfo eror: ", err);
+                        $("#productinfo").modal("hide");
+                    }
+                });
+            }
+
+
+        </script>
+  
+
+    <div class="well mt-5">
+        <!--sosyal media kısmı-->
+        <div class="row">
+
+            <div class="col-md-4 col-md-offset-4 text-center">
+
+                <a href="http://www.facebook.com" target="_blank">
+                    <span class="fa fa-facebook-square fa-2x"></span>
+                </a>
+
+                <a href="http://www.twitter.com" target="_blank">
+                    <span class="fa fa-twitter-square fa-2x"></span>
+                </a>
+
+                <a href="http://www.youtube.com" target="_blank">
+                    <span class="fa fa-youtube-square fa-2x text-danger"></span>
+                </a>
+
+            </div>
+
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <p>
+                    Tüm Hakları Saklıdır.&copy; 2017
+                </p>
+                <p>
+                    <a href="mailto:mail@mailcom" class="btn btn-info btn-sm">E-Posta Gönder</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Visual Studio Browser Link -->
+    <!-- End Browser Link -->
+
+</body>
+</html>
